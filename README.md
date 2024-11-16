@@ -32,12 +32,12 @@
 
 ---
 ## 6. Припинення дії Договору
-6.1. Цей Договір діє до моменту його припинення.
+6.1. Цей Договір діє до моменту його припинення.  
 6.2. Ліцензіар може припинити дію Договору в разі порушення Користувачем будь-яких умов цього Договору.
 
 ---
 ## 7. Інші положення
-7.1. Цей Договір регулюється чинним законодавством України.
+7.1. Цей Договір регулюється чинним законодавством України.  
 7.2. Усі спори, що виникають у зв’язку з цим Договором, вирішуються шляхом переговорів, а в разі неможливості досягнення згоди — у відповідному суді.
 
 Підписуючи або встановлюючи/використовуючи Програмне забезпечення, Ви підтверджуєте, що ознайомилися з умовами цього Договору та погоджуєтеся з ними.
@@ -53,7 +53,7 @@ This License Agreement (hereinafter referred to as the "Agreement") is a legally
 
 ---
 ## 1. Subject of the Agreement
-1.1. The Licensor grants the User a non-exclusive, limited license to use the Software under the terms of this Agreement.
+1.1. The Licensor grants the User a non-exclusive, limited license to use the Software under the terms of this Agreement.  
 1.2. The Software remains the exclusive property of the Licensor.
 
 ---
@@ -72,7 +72,7 @@ This License Agreement (hereinafter referred to as the "Agreement") is a legally
 
 ---
 ## 4. Liability
-4.1. The Licensor shall not be held liable for any direct or indirect damages resulting from the use of the Software.
+4.1. The Licensor shall not be held liable for any direct or indirect damages resulting from the use of the Software.  
 4.2. The Software is provided "as is," without any guarantees of functionality or suitability for specific purposes.
 
 ---
@@ -81,15 +81,15 @@ This License Agreement (hereinafter referred to as the "Agreement") is a legally
 
 ---
 ## 6. Termination of the Agreement
-6.1. This Agreement shall remain in effect until terminated.
+6.1. This Agreement shall remain in effect until terminated.  
 6.2. The Licensor may terminate this Agreement if the User violates any terms of this Agreement.
 
 ---
 ## 7. Miscellaneous Provisions
-7.1. This Agreement shall be governed by the laws of Ukraine.
+7.1. This Agreement shall be governed by the laws of Ukraine.  
 7.2. Any disputes arising from this Agreement shall be resolved through negotiations. If no resolution is reached, disputes shall be settled in the appropriate court.
 
 By signing or installing/using the Software, you confirm that you have read and agree to the terms of this Agreement.
 
-**Tetianych-Bublyk Bohdan-Liubomyr**  
+**Tetianych-Bublyk Bohdan-Liubomyr**    
 Date: 2024.11.16
