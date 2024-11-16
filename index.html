@@ -1,0 +1,502 @@
+
+<!--
+# ЛІЦЕНЗІЙНИЙ ДОГОВІР/LICENSE AGREEMENT (Ukrainian/English(bellow))
+# ЛІЦЕНЗІЙНИЙ ДОГОВІР
+Цей ліцензійний договір (далі — "Договір") є юридично обов’язковою угодою між Вами (далі — "Користувач") та Богданом-Любомиром Тетяничем-Бубликом (далі — "Ліцензіар") щодо використання програмного забезпечення (TETRAquantSimulator) (далі — "Програмне забезпечення").
+
+---
+## 1. Предмет договору
+1.1. Ліцензіар надає Користувачу невиключну, обмежену ліцензію на використання Програмного забезпечення відповідно до умов цього Договору.    
+1.2. Програмне забезпечення залишається виключною власністю Ліцензіара.
+
+---
+## 2. Права Користувача
+2.1. Користувач має право:
+
+- Використовувати Програмне забезпечення для особистих або професійних цілей.
+- Аналізувати вихідний код Програмного забезпечення (якщо він наданий).
+
+---
+## 3. Обмеження
+3.1. Користувач не має права:
+
+- Передавати, розповсюджувати, продавати, здавати в оренду, або надавати доступ до Програмного забезпечення без письмової згоди Ліцензіара.
+- Використовувати Програмне забезпечення для створення похідних продуктів без згоди Ліцензіара.
+
+---
+## 4. Відповідальність
+4.1. Ліцензіар не несе відповідальності за будь-які прямі або непрямі збитки, завдані внаслідок використання Програмного забезпечення.  
+4.2. Програмне забезпечення надається "як є", без жодних гарантій щодо його працездатності або відповідності конкретним цілям.
+
+---
+## 5. Захист інтелектуальної власності
+5.1. Усі права на Програмне забезпечення, включаючи, але не обмежуючись, авторськими правами та комерційними таємницями, залишаються за Ліцензіаром.
+
+---
+## 6. Припинення дії Договору
+6.1. Цей Договір діє до моменту його припинення.  
+6.2. Ліцензіар може припинити дію Договору в разі порушення Користувачем будь-яких умов цього Договору.
+
+---
+## 7. Інші положення
+7.1. Цей Договір регулюється чинним законодавством України.  
+7.2. Усі спори, що виникають у зв’язку з цим Договором, вирішуються шляхом переговорів, а в разі неможливості досягнення згоди — у відповідному суді.
+
+Підписуючи або встановлюючи/використовуючи Програмне забезпечення, Ви підтверджуєте, що ознайомилися з умовами цього Договору та погоджуєтеся з ними.
+
+**Богдан-Любомир Тетянич-Бублик**  
+Дата: 2024.11.16
+
+---
+---
+---
+## LICENSE AGREEMENT
+This License Agreement (hereinafter referred to as the "Agreement") is a legally binding agreement between you (hereinafter referred to as the "User") and Tetianych-Bublyk Bohdan-Liubomyr (hereinafter referred to as the "Licensor") regarding the use of the software(TETRAquantSimulator) (hereinafter referred to as the "Software").
+
+---
+## 1. Subject of the Agreement
+1.1. The Licensor grants the User a non-exclusive, limited license to use the Software under the terms of this Agreement.  
+1.2. The Software remains the exclusive property of the Licensor.
+
+---
+## 2. User Rights
+2.1. The User is entitled to:
+
+- Use the Software for personal or professional purposes.
+- Analyze the source code of the Software (if provided).
+
+---
+## 3. Restrictions
+3.1. The User is prohibited from:
+
+- Transferring, distributing, selling, renting, or granting access to the Software without the prior written consent of the Licensor.
+- Using the Software to create derivative works without the Licensor's consent.
+
+---
+## 4. Liability
+4.1. The Licensor shall not be held liable for any direct or indirect damages resulting from the use of the Software.  
+4.2. The Software is provided "as is," without any guarantees of functionality or suitability for specific purposes.
+
+---
+## 5. Intellectual Property Protection
+5.1. All rights to the Software, including but not limited to copyrights and trade secrets, remain with the Licensor.
+
+---
+## 6. Termination of the Agreement
+6.1. This Agreement shall remain in effect until terminated.  
+6.2. The Licensor may terminate this Agreement if the User violates any terms of this Agreement.
+
+---
+## 7. Miscellaneous Provisions
+7.1. This Agreement shall be governed by the laws of Ukraine.  
+7.2. Any disputes arising from this Agreement shall be resolved through negotiations. If no resolution is reached, disputes shall be settled in the appropriate court.
+
+By signing or installing/using the Software, you confirm that you have read and agree to the terms of this Agreement.
+
+**Tetianych-Bublyk Bohdan-Liubomyr**    
+Date: 2024.11.16 -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TetraPathFinder</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #canvas {
+    border: 1px solid black;
+    cursor: crosshair;
+    touch-action: none;
+  }
+  .buttons, .controls {
+    margin-top: 10px;
+  }
+  .buttons button, .controls input {
+    margin-right: 10px;
+    padding: 10px;
+  }
+    /* Стиль кнопки */
+#download-btn {
+    background: linear-gradient(180deg, #ffcc00, #0072ce); /* Чистий жовто-блакитний вертикальний градієнт */
+    border: none;
+    color: #ffffff; /* Білий текст */
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Більший інтервал між літерами */
+    padding: 15px 30px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3), -4px -4px 15px rgba(255, 255, 255, 0.3);
+    border-radius: 0; /* Різкі кути */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold; /* Жирний текст */
+}
+
+        /* Ефект при наведенні на кнопку */
+        #download-btn:hover {
+            background-color: #45a049; /* Трохи темніший зелений */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Більша тінь */
+            transform: translateY(-2px); /* Підйом кнопки */
+        }
+
+        /* Ефект при натисканні */
+        #download-btn:active {
+            background-color: #3e8e41; /* Ще темніший зелений */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Менша тінь */
+            transform: translateY(1px); /* Зниження кнопки */
+        }
+    #download-btn {
+            margin-top: 100px; /* Відступ знизу 20px */
+        }
+  #navigate-btn {
+    background: linear-gradient(180deg, #28a745, #218838); /* Зелено-блакитний градієнт */
+    border: none;
+    color: #ffffff; /* Білий текст */
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Більший інтервал між літерами */
+    padding: 15px 30px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3), -4px -4px 15px rgba(255, 255, 255, 0.3);
+    border-radius: 0; /* Різкі кути */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold; /* Жирний текст */
+     margin-top: 10px; /* Відступ знизу 20px */
+}
+
+/* Ефект при наведенні */
+#navigate-btn:hover {
+    background: linear-gradient(180deg, #218838, #006d2c); /* Глибший контраст градієнта */
+    transform: translateY(-3px); /* Підйом кнопки */
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4), -6px -6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Ефект при натисканні */
+#navigate-btn:active {
+    transform: translateY(1px); /* Легкий зсув вниз */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2), -2px -2px 10px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(180deg, #1e7e34, #004d1a); /* Темніший градієнт */
+}
+
+</style>
+</head>
+<body>
+
+<canvas id="canvas" width="600" height="400"></canvas>
+
+<div class="buttons">
+  <button id="redButton" style="background-color: red;">Червона</button>
+  <button id="greenButton" style="background-color: green;">Зелена</button>
+  <button id="blueButton" style="background-color: blue;">Синя</button>
+  <button id="orangeButton" style="background-color: orange;">Помаранчева</button>
+  <button id="goButton">Запуск хвилі</button>
+  <button id="undoButton">Відмінити</button>
+  <button id="clearButton">Очистити</button>
+</div>
+
+<div class="controls">
+  <label>Кількість частинок:</label>
+  <input type="number" id="particleCount" min="1" max="360" value="360">
+  <label>Швидкість:</label>
+  <input type="text" id="particleSpeed" value="2">
+</div>
+  
+  <div class="controls">
+    <button id="download-btn">download this game to play offline</button>
+</div>
+  
+    <button id="navigate-btn" onclick="window.location.href='https://github.com/svropsitam/TetraPathFinder';">How to play & License Terms</button>
+
+   <script>
+        // Base64-закодований HTML вміст
+       const base64HtmlContent = `PCEtLSAjINCb0IbQptCV0J3Ql9CG0JnQndCY0Jkg0JTQntCT0J7QktCG0KAvTElDRU5TRSBBR1JFRU1FTlQgKFVrcmFpbmlhbi9FbmdsaXNoKGJlbGxvdykpCiMg0JvQhtCm0JXQndCX0IbQmdCd0JjQmSDQlNCe0JPQntCS0IbQoArQptC10Lkg0LvRltGG0LXQvdC30ZbQudC90LjQuSDQtNC+0LPQvtCy0ZbRgCAo0LTQsNC70ZYg4oCUICLQlNC+0LPQvtCy0ZbRgCIpINGUINGO0YDQuNC00LjRh9C90L4g0L7QsdC+0LLigJnRj9C30LrQvtCy0L7RjiDRg9Cz0L7QtNC+0Y4g0LzRltC2INCS0LDQvNC4ICjQtNCw0LvRliDigJQgItCa0L7RgNC40YHRgtGD0LLQsNGHIikg0YLQsCDQkdC+0LPQtNCw0L0t0JvRjtCx0L7QvNC40YAg0KLQtdGC0Y/QvdC40Yct0JHRg9Cx0LvQuNC6ICjQtNCw0LvRliDigJQgItCb0ZbRhtC10L3Qt9GW0LDRgCIpINGJ0L7QtNC+INCy0LjQutC+0YDQuNGB0YLQsNC90L3RjyDQv9GA0L7Qs9GA0LDQvNC90L7Qs9C+INC30LDQsdC10LfQv9C10YfQtdC90L3Rjywg0L7Qv9C40YHQsNC90L7Qs9C+INC90LjQttGH0LUgKNC00LDQu9GWIOKAlCAi0J/RgNC+0LPRgNCw0LzQvdC1INC30LDQsdC10LfQv9C10YfQtdC90L3RjyIpLgoKLS0tCiMjIDEuINCf0YDQtdC00LzQtdGCINC00L7Qs9C+0LLQvtGA0YMKMS4xLiDQm9GW0YbQtdC90LfRltCw0YAg0L3QsNC00LDRlCDQmtC+0YDQuNGB0YLRg9Cy0LDRh9GDINC90LXQstC40LrQu9GO0YfQvdGDLCDQvtCx0LzQtdC20LXQvdGDINC70ZbRhtC10L3Qt9GW0Y4g0L3QsCDQstC40LrQvtGA0LjRgdGC0LDQvdC90Y8g0J/RgNC+0LPRgNCw0LzQvdC+0LPQviDQt9Cw0LHQtdC30L/QtdGH0LXQvdC90Y8g0LLRltC00L/QvtCy0ZbQtNC90L4g0LTQviDRg9C80L7QsiDRhtGM0L7Qs9C+INCU0L7Qs9C+0LLQvtGA0YMuICAgIAoxLjIuINCf0YDQvtCz0YDQsNC80L3QtSDQt9Cw0LHQtdC30L/QtdGH0LXQvdC90Y8g0LfQsNC70LjRiNCw0ZTRgtGM0YHRjyDQstC40LrQu9GO0YfQvdC+0Y4g0LLQu9Cw0YHQvdGW0YHRgtGOINCb0ZbRhtC10L3Qt9GW0LDRgNCwLgoKLS0tCiMjIDIuINCf0YDQsNCy0LAg0JrQvtGA0LjRgdGC0YPQstCw0YfQsAoyLjEuINCa0L7RgNC40YHRgtGD0LLQsNGHINC80LDRlCDQv9GA0LDQstC+OgoKLSDQktC40LrQvtGA0LjRgdGC0L7QstGD0LLQsNGC0Lgg0J/RgNC+0LPRgNCw0LzQvdC1INC30LDQsdC10LfQv9C10YfQtdC90L3RjyDQtNC70Y8g0L7RgdC+0LHQuNGB0YLQuNGFINCw0LHQviDQv9GA0L7RhNC10YHRltC50L3QuNGFINGG0ZbQu9C10LkuCi0g0JDQvdCw0LvRltC30YPQstCw0YLQuCDQstC40YXRltC00L3QuNC5INC60L7QtCDQn9GA0L7Qs9GA0LDQvNC90L7Qs9C+INC30LDQsdC10LfQv9C10YfQtdC90L3RjyAo0Y/QutGJ0L4g0LLRltC9INC90LDQtNCw0L3QuNC5KS4KCi0tLQojIyAzLiDQntCx0LzQtdC20LXQvdC90Y8KMy4xLiDQmtC+0YDQuNGB0YLRg9Cy0LDRhyDQvdC1INC80LDRlCDQv9GA0LDQstCwOgoKLSDQn9C10YDQtdC00LDQstCw0YLQuCwg0YDQvtC30L/QvtCy0YHRjtC00LbRg9Cy0LDRgtC4LCDQv9GA0L7QtNCw0LLQsNGC0LgsINC30LTQsNCy0LDRgtC4INCyINC+0YDQtdC90LTRgywg0LDQsdC+INC90LDQtNCw0LLQsNGC0Lgg0LTQvtGB0YLRg9C/INC00L4g0J/RgNC+0LPRgNCw0LzQvdC+0LPQviDQt9Cw0LHQtdC30L/QtdGH0LXQvdC90Y8g0LHQtdC3INC/0LjRgdGM0LzQvtCy0L7RlyDQt9Cz0L7QtNC4INCb0ZbRhtC10L3Qt9GW0LDRgNCwLgotINCS0LjQutC+0YDQuNGB0YLQvtCy0YPQstCw0YLQuCDQn9GA0L7Qs9GA0LDQvNC90LUg0LfQsNCx0LXQt9C/0LXRh9C10L3QvdGPINC00LvRjyDRgdGC0LLQvtGA0LXQvdC90Y8g0L/QvtGF0ZbQtNC90LjRhSDQv9GA0L7QtNGD0LrRgtGW0LIg0LHQtdC3INC30LPQvtC00Lgg0JvRltGG0LXQvdC30ZbQsNGA0LAuCgotLS0KIyMgNC4g0JLRltC00L/QvtCy0ZbQtNCw0LvRjNC90ZbRgdGC0YwKNC4xLiDQm9GW0YbQtdC90LfRltCw0YAg0L3QtSDQvdC10YHQtSDQstGW0LTQv9C+0LLRltC00LDQu9GM0L3QvtGB0YLRliDQt9CwINCx0YPQtNGMLdGP0LrRliDQv9GA0Y/QvNGWINCw0LHQviDQvdC10L/RgNGP0LzRliDQt9Cx0LjRgtC60LgsINC30LDQstC00LDQvdGWINCy0L3QsNGB0LvRltC00L7QuiDQstC40LrQvtGA0LjRgdGC0LDQvdC90Y8g0J/RgNC+0LPRgNCw0LzQvdC+0LPQviDQt9Cw0LHQtdC30L/QtdGH0LXQvdC90Y8uICAKNC4yLiDQn9GA0L7Qs9GA0LDQvNC90LUg0LfQsNCx0LXQt9C/0LXRh9C10L3QvdGPINC90LDQtNCw0ZTRgtGM0YHRjyAi0Y/QuiDRlCIsINCx0LXQtyDQttC+0LTQvdC40YUg0LPQsNGA0LDQvdGC0ZbQuSDRidC+0LTQviDQudC+0LPQviDQv9GA0LDRhtC10LfQtNCw0YLQvdC+0YHRgtGWINCw0LHQviDQstGW0LTQv9C+0LLRltC00L3QvtGB0YLRliDQutC+0L3QutGA0LXRgtC90LjQvCDRhtGW0LvRj9C8LgoKLS0tCiMjIDUuINCX0LDRhdC40YHRgiDRltC90YLQtdC70LXQutGC0YPQsNC70YzQvdC+0Zcg0LLQu9Cw0YHQvdC+0YHRgtGWCjUuMS4g0KPRgdGWINC/0YDQsNCy0LAg0L3QsCDQn9GA0L7Qs9GA0LDQvNC90LUg0LfQsNCx0LXQt9C/0LXRh9C10L3QvdGPLCDQstC60LvRjtGH0LDRjtGH0LgsINCw0LvQtSDQvdC1INC+0LHQvNC10LbRg9GO0YfQuNGB0YwsINCw0LLRgtC+0YDRgdGM0LrQuNC80Lgg0L/RgNCw0LLQsNC80Lgg0YLQsCDQutC+0LzQtdGA0YbRltC50L3QuNC80Lgg0YLQsNGU0LzQvdC40YbRj9C80LgsINC30LDQu9C40YjQsNGO0YLRjNGB0Y8g0LfQsCDQm9GW0YbQtdC90LfRltCw0YDQvtC8LgoKLS0tCiMjIDYuINCf0YDQuNC/0LjQvdC10L3QvdGPINC00ZbRlyDQlNC+0LPQvtCy0L7RgNGDCjYuMS4g0KbQtdC5INCU0L7Qs9C+0LLRltGAINC00ZbRlCDQtNC+INC80L7QvNC10L3RgtGDINC50L7Qs9C+INC/0YDQuNC/0LjQvdC10L3QvdGPLiAgCjYuMi4g0JvRltGG0LXQvdC30ZbQsNGAINC80L7QttC1INC/0YDQuNC/0LjQvdC40YLQuCDQtNGW0Y4g0JTQvtCz0L7QstC+0YDRgyDQsiDRgNCw0LfRliDQv9C+0YDRg9GI0LXQvdC90Y8g0JrQvtGA0LjRgdGC0YPQstCw0YfQtdC8INCx0YPQtNGMLdGP0LrQuNGFINGD0LzQvtCyINGG0YzQvtCz0L4g0JTQvtCz0L7QstC+0YDRgy4KCi0tLQojIyA3LiDQhtC90YjRliDQv9C+0LvQvtC20LXQvdC90Y8KNy4xLiDQptC10Lkg0JTQvtCz0L7QstGW0YAg0YDQtdCz0YPQu9GO0ZTRgtGM0YHRjyDRh9C40L3QvdC40Lwg0LfQsNC60L7QvdC+0LTQsNCy0YHRgtCy0L7QvCDQo9C60YDQsNGX0L3QuC4gIAo3LjIuINCj0YHRliDRgdC/0L7RgNC4LCDRidC+INCy0LjQvdC40LrQsNGO0YLRjCDRgyDQt9Cy4oCZ0Y/Qt9C60YMg0Lcg0YbQuNC8INCU0L7Qs9C+0LLQvtGA0L7QvCwg0LLQuNGA0ZbRiNGD0Y7RgtGM0YHRjyDRiNC70Y/RhdC+0Lwg0L/QtdGA0LXQs9C+0LLQvtGA0ZbQsiwg0LAg0LIg0YDQsNC30ZYg0L3QtdC80L7QttC70LjQstC+0YHRgtGWINC00L7RgdGP0LPQvdC10L3QvdGPINC30LPQvtC00Lgg4oCUINGDINCy0ZbQtNC/0L7QstGW0LTQvdC+0LzRgyDRgdGD0LTRli4KCtCf0ZbQtNC/0LjRgdGD0Y7Rh9C4INCw0LHQviDQstGB0YLQsNC90L7QstC70Y7RjtGH0Lgv0LLQuNC60L7RgNC40YHRgtC+0LLRg9GO0YfQuCDQn9GA0L7Qs9GA0LDQvNC90LUg0LfQsNCx0LXQt9C/0LXRh9C10L3QvdGPLCDQktC4INC/0ZbQtNGC0LLQtdGA0LTQttGD0ZTRgtC1LCDRidC+INC+0LfQvdCw0LnQvtC80LjQu9C40YHRjyDQtyDRg9C80L7QstCw0LzQuCDRhtGM0L7Qs9C+INCU0L7Qs9C+0LLQvtGA0YMg0YLQsCDQv9C+0LPQvtC00LbRg9GU0YLQtdGB0Y8g0Lcg0L3QuNC80LguCgoqKtCR0L7Qs9C00LDQvS3Qm9GO0LHQvtC80LjRgCDQotC10YLRj9C90LjRhy3QkdGD0LHQu9C40LoqKiAgCtCU0LDRgtCwOiAyMDI0LjExLjE2CgotLS0KLS0tCi0tLQojIyBMSUNFTlNFIEFHUkVFTUVOVApUaGlzIExpY2Vuc2UgQWdyZWVtZW50IChoZXJlaW5hZnRlciByZWZlcnJlZCB0byBhcyB0aGUgIkFncmVlbWVudCIpIGlzIGEgbGVnYWxseSBiaW5kaW5nIGFncmVlbWVudCBiZXR3ZWVuIHlvdSAoaGVyZWluYWZ0ZXIgcmVmZXJyZWQgdG8gYXMgdGhlICJVc2VyIikgYW5kIFRldGlhbnljaC1CdWJseWsgQm9oZGFuLUxpdWJvbXlyIChoZXJlaW5hZnRlciByZWZlcnJlZCB0byBhcyB0aGUgIkxpY2Vuc29yIikgcmVnYXJkaW5nIHRoZSB1c2Ugb2YgdGhlIHNvZnR3YXJlIGRlc2NyaWJlZCBiZWxvdyAoaGVyZWluYWZ0ZXIgcmVmZXJyZWQgdG8gYXMgdGhlICJTb2Z0d2FyZSIpLgoKLS0tCiMjIDEuIFN1YmplY3Qgb2YgdGhlIEFncmVlbWVudAoxLjEuIFRoZSBMaWNlbnNvciBncmFudHMgdGhlIFVzZXIgYSBub24tZXhjbHVzaXZlLCBsaW1pdGVkIGxpY2Vuc2UgdG8gdXNlIHRoZSBTb2Z0d2FyZSB1bmRlciB0aGUgdGVybXMgb2YgdGhpcyBBZ3JlZW1lbnQuICAKMS4yLiBUaGUgU29mdHdhcmUgcmVtYWlucyB0aGUgZXhjbHVzaXZlIHByb3BlcnR5IG9mIHRoZSBMaWNlbnNvci4KCi0tLQojIyAyLiBVc2VyIFJpZ2h0cwoyLjEuIFRoZSBVc2VyIGlzIGVudGl0bGVkIHRvOgoKLSBVc2UgdGhlIFNvZnR3YXJlIGZvciBwZXJzb25hbCBvciBwcm9mZXNzaW9uYWwgcHVycG9zZXMuCi0gQW5hbHl6ZSB0aGUgc291cmNlIGNvZGUgb2YgdGhlIFNvZnR3YXJlIChpZiBwcm92aWRlZCkuCgotLS0KIyMgMy4gUmVzdHJpY3Rpb25zCjMuMS4gVGhlIFVzZXIgaXMgcHJvaGliaXRlZCBmcm9tOgoKLSBUcmFuc2ZlcnJpbmcsIGRpc3RyaWJ1dGluZywgc2VsbGluZywgcmVudGluZywgb3IgZ3JhbnRpbmcgYWNjZXNzIHRvIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHRoZSBwcmlvciB3cml0dGVuIGNvbnNlbnQgb2YgdGhlIExpY2Vuc29yLgotIFVzaW5nIHRoZSBTb2Z0d2FyZSB0byBjcmVhdGUgZGVyaXZhdGl2ZSB3b3JrcyB3aXRob3V0IHRoZSBMaWNlbnNvcidzIGNvbnNlbnQuCgotLS0KIyMgNC4gTGlhYmlsaXR5CjQuMS4gVGhlIExpY2Vuc29yIHNoYWxsIG5vdCBiZSBoZWxkIGxpYWJsZSBmb3IgYW55IGRpcmVjdCBvciBpbmRpcmVjdCBkYW1hZ2VzIHJlc3VsdGluZyBmcm9tIHRoZSB1c2Ugb2YgdGhlIFNvZnR3YXJlLiAgCjQuMi4gVGhlIFNvZnR3YXJlIGlzIHByb3ZpZGVkICJhcyBpcywiIHdpdGhvdXQgYW55IGd1YXJhbnRlZXMgb2YgZnVuY3Rpb25hbGl0eSBvciBzdWl0YWJpbGl0eSBmb3Igc3BlY2lmaWMgcHVycG9zZXMuCgotLS0KIyMgNS4gSW50ZWxsZWN0dWFsIFByb3BlcnR5IFByb3RlY3Rpb24KNS4xLiBBbGwgcmlnaHRzIHRvIHRoZSBTb2Z0d2FyZSwgaW5jbHVkaW5nIGJ1dCBub3QgbGltaXRlZCB0byBjb3B5cmlnaHRzIGFuZCB0cmFkZSBzZWNyZXRzLCByZW1haW4gd2l0aCB0aGUgTGljZW5zb3IuCgotLS0KIyMgNi4gVGVybWluYXRpb24gb2YgdGhlIEFncmVlbWVudAo2LjEuIFRoaXMgQWdyZWVtZW50IHNoYWxsIHJlbWFpbiBpbiBlZmZlY3QgdW50aWwgdGVybWluYXRlZC4gIAo2LjIuIFRoZSBMaWNlbnNvciBtYXkgdGVybWluYXRlIHRoaXMgQWdyZWVtZW50IGlmIHRoZSBVc2VyIHZpb2xhdGVzIGFueSB0ZXJtcyBvZiB0aGlzIEFncmVlbWVudC4KCi0tLQojIyA3LiBNaXNjZWxsYW5lb3VzIFByb3Zpc2lvbnMKNy4xLiBUaGlzIEFncmVlbWVudCBzaGFsbCBiZSBnb3Zlcm5lZCBieSB0aGUgbGF3cyBvZiBVa3JhaW5lLiAgCjcuMi4gQW55IGRpc3B1dGVzIGFyaXNpbmcgZnJvbSB0aGlzIEFncmVlbWVudCBzaGFsbCBiZSByZXNvbHZlZCB0aHJvdWdoIG5lZ290aWF0aW9ucy4gSWYgbm8gcmVzb2x1dGlvbiBpcyByZWFjaGVkLCBkaXNwdXRlcyBzaGFsbCBiZSBzZXR0bGVkIGluIHRoZSBhcHByb3ByaWF0ZSBjb3VydC4KCkJ5IHNpZ25pbmcgb3IgaW5zdGFsbGluZy91c2luZyB0aGUgU29mdHdhcmUsIHlvdSBjb25maXJtIHRoYXQgeW91IGhhdmUgcmVhZCBhbmQgYWdyZWUgdG8gdGhlIHRlcm1zIG9mIHRoaXMgQWdyZWVtZW50LgoKKipUZXRpYW55Y2gtQnVibHlrIEJvaGRhbi1MaXVib215cioqICAgIApEYXRlOiAyMDI0LjExLjE2IC0tPgoKPCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9InVrIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgICA8dGl0bGU+UGF0aGZpbmRpbmcgQ2FudmFzPC90aXRsZT4KICAgIDxzdHlsZT4KICAgICAgICBjYW52YXMgewogICAgICAgICAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjazsKICAgICAgICAgICAgZGlzcGxheTogYmxvY2s7CiAgICAgICAgICAgIG1hcmdpbjogMTBweCBhdXRvOwogICAgICAgICAgICB0b3VjaC1hY3Rpb246IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5jb250cm9scyB7CiAgICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgICAgICAgICAgbWFyZ2luOiAxMHB4IDA7CiAgICAgICAgfQogICAgICAgIC5idG4gewogICAgICAgICAgICBwYWRkaW5nOiA4cHggMTVweDsKICAgICAgICAgICAgbWFyZ2luOiAwIDVweDsKICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDsKICAgICAgICAgICAgZm9udC1zaXplOiAxNHB4OwogICAgICAgIH0KICAgICAgICAuYnRuLXllbGxvdyB7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkQ3MDA7CiAgICAgICAgICAgIGNvbG9yOiBibGFjazsKICAgICAgICB9CiAgICAgICAgLmJ0bi1ibHVlIHsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzAwMDBGRjsKICAgICAgICAgICAgY29sb3I6IHdoaXRlOwogICAgICAgIH0KICAgICAgICAuYnRuLWJsYWNrIHsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzAwMDAwMDsKICAgICAgICAgICAgY29sb3I6IHdoaXRlOwogICAgICAgIH0KICAgICAgICAuYnRuLWdvIHsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzMyQ0QzMjsKICAgICAgICAgICAgY29sb3I6IHdoaXRlOwogICAgICAgIH0KICAgICAgICAuYnRuLXVuZG8gewogICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkY0NTAwOwogICAgICAgICAgICBjb2xvcjogd2hpdGU7CiAgICAgICAgfQogICAgICAgIC5hY3RpdmUgewogICAgICAgICAgICBib3gtc2hhZG93OiAwIDAgNXB4ICM2NjY7CiAgICAgICAgICAgIHRyYW5zZm9ybTogc2NhbGUoMS4xKTsKICAgICAgICB9CiAgI25hdmlnYXRlLWJ0biB7CiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTgwZGVnLCAjMjhhNzQ1LCAjMjE4ODM4KTsgLyog0JfQtdC70LXQvdC+LdCx0LvQsNC60LjRgtC90LjQuSDQs9GA0LDQtNGW0ZTQvdGCICovCiAgICBib3JkZXI6IG5vbmU7CiAgICBjb2xvcjogI2ZmZmZmZjsgLyog0JHRltC70LjQuSDRgtC10LrRgdGCICovCiAgICBmb250LXNpemU6IDIwcHg7CiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogICAgbGV0dGVyLXNwYWNpbmc6IDEuNXB4OyAvKiDQkdGW0LvRjNGI0LjQuSDRltC90YLQtdGA0LLQsNC7INC80ZbQtiDQu9GW0YLQtdGA0LDQvNC4ICovCiAgICBwYWRkaW5nOiAxNXB4IDMwcHg7CiAgICBjdXJzb3I6IHBvaW50ZXI7CiAgICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgICBib3gtc2hhZG93OiA0cHggNHB4IDE1cHggcmdiYSgwLCAwLCAwLCAwLjMpLCAtNHB4IC00cHggMTVweCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMyk7CiAgICBib3JkZXItcmFkaXVzOiAwOyAvKiDQoNGW0LfQutGWINC60YPRgtC4ICovCiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4zcyBlYXNlLCBib3gtc2hhZG93IDAuM3MgZWFzZSwgYmFja2dyb3VuZCAwLjNzIGVhc2U7CiAgICBmb250LWZhbWlseTogJ0FyaWFsJywgc2Fucy1zZXJpZjsKICAgIGZvbnQtd2VpZ2h0OiBib2xkOyAvKiDQltC40YDQvdC40Lkg0YLQtdC60YHRgiAqLwogICAgIG1hcmdpbi10b3A6IDYwcHg7IC8qINCS0ZbQtNGB0YLRg9C/INC30L3QuNC30YMgMjBweCAqLwogICAgIGRpc3BsYXk6IGJsb2NrOyAvKiDQn9C10YDQtdGC0LLQvtGA0Y7RlCDQvdCwINCx0LvQvtC6ICovCiAgICBtYXJnaW4tbGVmdDogYXV0bzsgLyog0JDQstGC0L7QvNCw0YLQuNGH0L3QuNC5INC70ZbQstC40Lkg0LLRltC00YHRgtGD0L8gKi8KICAgIG1hcmdpbi1yaWdodDogYXV0bzsgLyog0JDQstGC0L7QvNCw0YLQuNGH0L3QuNC5INC/0YDQsNCy0LjQuSDQstGW0LTRgdGC0YPQvyAqLwp9CgovKiDQldGE0LXQutGCINC/0YDQuCDQvdCw0LLQtdC00LXQvdC90ZYgKi8KI25hdmlnYXRlLWJ0bjpob3ZlciB7CiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTgwZGVnLCAjMjE4ODM4LCAjMDA2ZDJjKTsgLyog0JPQu9C40LHRiNC40Lkg0LrQvtC90YLRgNCw0YHRgiDQs9GA0LDQtNGW0ZTQvdGC0LAgKi8KICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtM3B4KTsgLyog0J/RltC00LnQvtC8INC60L3QvtC/0LrQuCAqLwogICAgYm94LXNoYWRvdzogNnB4IDZweCAyMHB4IHJnYmEoMCwgMCwgMCwgMC40KSwgLTZweCAtNnB4IDIwcHggcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjQpOwp9CgovKiDQldGE0LXQutGCINC/0YDQuCDQvdCw0YLQuNGB0LrQsNC90L3RliAqLwojbmF2aWdhdGUtYnRuOmFjdGl2ZSB7CiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTsgLyog0JvQtdCz0LrQuNC5INC30YHRg9CyINCy0L3QuNC3ICovCiAgICBib3gtc2hhZG93OiAycHggMnB4IDEwcHggcmdiYSgwLCAwLCAwLCAwLjIpLCAtMnB4IC0ycHggMTBweCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMik7CiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTgwZGVnLCAjMWU3ZTM0LCAjMDA0ZDFhKTsgLyog0KLQtdC80L3RltGI0LjQuSDQs9GA0LDQtNGW0ZTQvdGCICovCn0KICAgIDwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+CiAgICA8Y2FudmFzIGlkPSJjYW52YXMiIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48L2NhbnZhcz4KICAgIDxkaXYgY2xhc3M9ImNvbnRyb2xzIj4KICAgICAgICA8YnV0dG9uIGlkPSJibGFja0J0biIgY2xhc3M9ImJ0biBidG4tYmxhY2siPtCn0L7RgNC90LjQuTwvYnV0dG9uPgogICAgICAgIDxidXR0b24gaWQ9InllbGxvd0J0biIgY2xhc3M9ImJ0biBidG4teWVsbG93Ij7QltC+0LLRgtC40Lk8L2J1dHRvbj4KICAgICAgICA8YnV0dG9uIGlkPSJibHVlQnRuIiBjbGFzcz0iYnRuIGJ0bi1ibHVlIj7QodC40L3RltC5PC9idXR0b24+CiAgICAgICAgPGJ1dHRvbiBpZD0iZ29CdG4iIGNsYXNzPSJidG4gYnRuLWdvIj7Qn9C+0LHRltCzPC9idXR0b24+CiAgICAgICAgPGJ1dHRvbiBpZD0idW5kb0J0biIgY2xhc3M9ImJ0biBidG4tdW5kbyI+0JLRltC00LzRltC90LjRgtC4PC9idXR0b24+CiAgICA8L2Rpdj4KICAKIDxidXR0b24gaWQ9Im5hdmlnYXRlLWJ0biIgb25jbGljaz0id2luZG93LmxvY2F0aW9uLmhyZWY9J2h0dHBzOi8vZ2l0aHViLmNvbS9zdnJvcHNpdGFtL1RldHJhUGF0aEZpbmRlcic7Ij5Ib3cgdG8gcGxheSAmIExpY2Vuc2UgVGVybXM8L2J1dHRvbj4KCgogICAgPHNjcmlwdD4KICAgICAgICAgY29uc3Qgd29ya2VyQ29kZSA9IGAKICAgICAgICAgICAgZnVuY3Rpb24gY2FsY3VsYXRlUGF0aChzdGFydCwgZW5kLCBvYnN0YWNsZXMpIHsKICAgICAgICAgICAgICAgIGZ1bmN0aW9uIGhldXJpc3RpYyhhLCBiKSB7CiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIE1hdGguYWJzKGEueCAtIGIueCkgKyBNYXRoLmFicyhhLnkgLSBiLnkpOwogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIGZ1bmN0aW9uIGdldE5laWdoYm9ycyhub2RlKSB7CiAgICAgICAgICAgICAgICAgICAgY29uc3QgbmVpZ2hib3JzID0gW107CiAgICAgICAgICAgICAgICAgICAgY29uc3QgZGlyZWN0aW9ucyA9IFsKICAgICAgICAgICAgICAgICAgICAgICAge3g6IDAsIHk6IDF9LCB7eDogMSwgeTogMH0sCiAgICAgICAgICAgICAgICAgICAgICAgIHt4OiAwLCB5OiAtMX0sIHt4OiAtMSwgeTogMH0sCiAgICAgICAgICAgICAgICAgICAgICAgIHt4OiAxLCB5OiAxfSwge3g6IC0xLCB5OiAxfSwKICAgICAgICAgICAgICAgICAgICAgICAge3g6IDEsIHk6IC0xfSwge3g6IC0xLCB5OiAtMX0KICAgICAgICAgICAgICAgICAgICBdOwoKICAgICAgICAgICAgICAgICAgICBmb3IgKGxldCBkaXIgb2YgZGlyZWN0aW9ucykgewogICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBuZXdYID0gbm9kZS54ICsgZGlyLnggKiAxMDsKICAgICAgICAgICAgICAgICAgICAgICAgY29uc3QgbmV3WSA9IG5vZGUueSArIGRpci55ICogMTA7CgogICAgICAgICAgICAgICAgICAgICAgICBpZiAobmV3WCA+PSAwICYmIG5ld1ggPCA4MDAgJiYgbmV3WSA+PSAwICYmIG5ld1kgPCA2MDApIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxldCBjb2xsaXNpb24gPSBmYWxzZTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZvciAobGV0IG9ic3RhY2xlIG9mIG9ic3RhY2xlcykgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IGRpc3RhbmNlID0gTWF0aC5zcXJ0KAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYXRoLnBvdyhuZXdYIC0gb2JzdGFjbGUueCwgMikgKyAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTWF0aC5wb3cobmV3WSAtIG9ic3RhY2xlLnksIDIpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZGlzdGFuY2UgPCAxMCkgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb2xsaXNpb24gPSB0cnVlOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgKCFjb2xsaXNpb24pIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBuZWlnaGJvcnMucHVzaCh7eDogbmV3WCwgeTogbmV3WX0pOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIHJldHVybiBuZWlnaGJvcnM7CiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgY29uc3Qgb3BlblNldCA9IFtzdGFydF07CiAgICAgICAgICAgICAgICBjb25zdCBjYW1lRnJvbSA9IG5ldyBNYXAoKTsKICAgICAgICAgICAgICAgIGNvbnN0IGdTY29yZSA9IG5ldyBNYXAoKTsKICAgICAgICAgICAgICAgIGNvbnN0IGZTY29yZSA9IG5ldyBNYXAoKTsKCiAgICAgICAgICAgICAgICBnU2NvcmUuc2V0KEpTT04uc3RyaW5naWZ5KHN0YXJ0KSwgMCk7CiAgICAgICAgICAgICAgICBmU2NvcmUuc2V0KEpTT04uc3RyaW5naWZ5KHN0YXJ0KSwgaGV1cmlzdGljKHN0YXJ0LCBlbmQpKTsKCiAgICAgICAgICAgICAgICB3aGlsZSAob3BlblNldC5sZW5ndGggPiAwKSB7CiAgICAgICAgICAgICAgICAgICAgbGV0IGN1cnJlbnQgPSBvcGVuU2V0WzBdOwogICAgICAgICAgICAgICAgICAgIGxldCBsb3dlc3RGU2NvcmUgPSBmU2NvcmUuZ2V0KEpTT04uc3RyaW5naWZ5KGN1cnJlbnQpKTsKICAgICAgICAgICAgICAgICAgICBsZXQgY3VycmVudEluZGV4ID0gMDsKCiAgICAgICAgICAgICAgICAgICAgZm9yIChsZXQgaSA9IDE7IGkgPCBvcGVuU2V0Lmxlbmd0aDsgaSsrKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IHNjb3JlID0gZlNjb3JlLmdldChKU09OLnN0cmluZ2lmeShvcGVuU2V0W2ldKSk7CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIChzY29yZSA8IGxvd2VzdEZTY29yZSkgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgY3VycmVudCA9IG9wZW5TZXRbaV07CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBsb3dlc3RGU2NvcmUgPSBzY29yZTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGN1cnJlbnRJbmRleCA9IGk7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgICAgIGlmIChNYXRoLmFicyhjdXJyZW50LnggLSBlbmQueCkgPCAxMCAmJiBNYXRoLmFicyhjdXJyZW50LnkgLSBlbmQueSkgPCAxMCkgewogICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBwYXRoID0gW2N1cnJlbnRdOwogICAgICAgICAgICAgICAgICAgICAgICBsZXQgdGVtcCA9IGN1cnJlbnQ7CiAgICAgICAgICAgICAgICAgICAgICAgIHdoaWxlIChjYW1lRnJvbS5oYXMoSlNPTi5zdHJpbmdpZnkodGVtcCkpKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB0ZW1wID0gY2FtZUZyb20uZ2V0KEpTT04uc3RyaW5naWZ5KHRlbXApKTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBhdGgudW5zaGlmdCh0ZW1wKTsKICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gcGF0aDsKICAgICAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgICAgIG9wZW5TZXQuc3BsaWNlKGN1cnJlbnRJbmRleCwgMSk7CiAgICAgICAgICAgICAgICAgICAgY29uc3QgbmVpZ2hib3JzID0gZ2V0TmVpZ2hib3JzKGN1cnJlbnQpOwoKICAgICAgICAgICAgICAgICAgICBmb3IgKGxldCBuZWlnaGJvciBvZiBuZWlnaGJvcnMpIHsKICAgICAgICAgICAgICAgICAgICAgICAgY29uc3QgdGVudGF0aXZlR1Njb3JlID0gZ1Njb3JlLmdldChKU09OLnN0cmluZ2lmeShjdXJyZW50KSkgKyAKICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1hdGguc3FydChNYXRoLnBvdyhuZWlnaGJvci54IC0gY3VycmVudC54LCAyKSArIE1hdGgucG93KG5laWdoYm9yLnkgLSBjdXJyZW50LnksIDIpKTsKCiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IG5laWdoYm9yU3RyID0gSlNPTi5zdHJpbmdpZnkobmVpZ2hib3IpOwogICAgICAgICAgICAgICAgICAgICAgICBpZiAoIWdTY29yZS5oYXMobmVpZ2hib3JTdHIpIHx8IHRlbnRhdGl2ZUdTY29yZSA8IGdTY29yZS5nZXQobmVpZ2hib3JTdHIpKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjYW1lRnJvbS5zZXQobmVpZ2hib3JTdHIsIGN1cnJlbnQpOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgZ1Njb3JlLnNldChuZWlnaGJvclN0ciwgdGVudGF0aXZlR1Njb3JlKTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZTY29yZS5zZXQobmVpZ2hib3JTdHIsIHRlbnRhdGl2ZUdTY29yZSArIGhldXJpc3RpYyhuZWlnaGJvciwgZW5kKSk7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgKCFvcGVuU2V0LnNvbWUocCA9PiBwLnggPT09IG5laWdoYm9yLnggJiYgcC55ID09PSBuZWlnaGJvci55KSkgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9wZW5TZXQucHVzaChuZWlnaGJvcik7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICByZXR1cm4gbnVsbDsKICAgICAgICAgICAgfQoKICAgICAgICAgICAgc2VsZi5vbm1lc3NhZ2UgPSBmdW5jdGlvbihlKSB7CiAgICAgICAgICAgICAgICBjb25zdCBwYXRoID0gY2FsY3VsYXRlUGF0aChlLmRhdGEuc3RhcnQsIGUuZGF0YS5lbmQsIGUuZGF0YS5vYnN0YWNsZXMpOwogICAgICAgICAgICAgICAgc2VsZi5wb3N0TWVzc2FnZShwYXRoKTsKICAgICAgICAgICAgfTsKICAgICAgICBgOwoKCiAgICAgICAgY29uc3QgYmxvYiA9IG5ldyBCbG9iKFt3b3JrZXJDb2RlXSwgeyB0eXBlOiAnYXBwbGljYXRpb24vamF2YXNjcmlwdCcgfSk7CiAgICAgICAgY29uc3Qgd29ya2VyID0gbmV3IFdvcmtlcihVUkwuY3JlYXRlT2JqZWN0VVJMKGJsb2IpKTsKCiAgICAgICAgY29uc3QgY2FudmFzID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NhbnZhcycpOwogICAgICAgIGNvbnN0IGN0eCA9IGNhbnZhcy5nZXRDb250ZXh0KCcyZCcpOwogICAgICAgIGNvbnN0IGJsYWNrQnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2JsYWNrQnRuJyk7CiAgICAgICAgY29uc3QgeWVsbG93QnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3llbGxvd0J0bicpOwogICAgICAgIGNvbnN0IGJsdWVCdG4gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYmx1ZUJ0bicpOwogICAgICAgIGNvbnN0IGdvQnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2dvQnRuJyk7CiAgICAgICAgY29uc3QgdW5kb0J0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd1bmRvQnRuJyk7CgogICAgICAgIGxldCBjdXJyZW50TW9kZSA9ICdibGFjayc7CiAgICAgICAgbGV0IHBvaW50cyA9IHsKICAgICAgICAgICAgYmxhY2s6IG51bGwsCiAgICAgICAgICAgIHllbGxvdzogbnVsbAogICAgICAgIH07CiAgICAgICAgbGV0IGJsdWVEb3RzID0gW107CiAgICAgICAgbGV0IGlzRHJhd2luZyA9IGZhbHNlOwogICAgICAgIGxldCBjdXJyZW50UGF0aCA9IG51bGw7CiAgICAgICAgbGV0IGFuaW1hdGlvbklkID0gbnVsbDsKICAgICAgICBsZXQgYmx1ZURvdHNTdGFjayA9IFtdOyAvLyDQodGC0LXQuiDQtNC70Y8g0LfQsdC10YDQtdC20LXQvdC90Y8g0YHRgtCw0L3RgyDQv9C10YDQtdGI0LrQvtC0CgogICAgICAgIGJsYWNrQnRuLmNsYXNzTGlzdC5hZGQoJ2FjdGl2ZScpOwoKICAgICAgICBmdW5jdGlvbiBzZXRNb2RlKG1vZGUpIHsKICAgICAgICAgICAgY3VycmVudE1vZGUgPSBtb2RlOwogICAgICAgICAgICBbYmxhY2tCdG4sIHllbGxvd0J0biwgYmx1ZUJ0bl0uZm9yRWFjaChidG4gPT4gYnRuLmNsYXNzTGlzdC5yZW1vdmUoJ2FjdGl2ZScpKTsKICAgICAgICAgICAgc3dpdGNoKG1vZGUpIHsKICAgICAgICAgICAgICAgIGNhc2UgJ2JsYWNrJzoKICAgICAgICAgICAgICAgICAgICBibGFja0J0bi5jbGFzc0xpc3QuYWRkKCdhY3RpdmUnKTsKICAgICAgICAgICAgICAgICAgICBicmVhazsKICAgICAgICAgICAgICAgIGNhc2UgJ3llbGxvdyc6CiAgICAgICAgICAgICAgICAgICAgeWVsbG93QnRuLmNsYXNzTGlzdC5hZGQoJ2FjdGl2ZScpOwogICAgICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICAgICAgY2FzZSAnYmx1ZSc6CiAgICAgICAgICAgICAgICAgICAgYmx1ZUJ0bi5jbGFzc0xpc3QuYWRkKCdhY3RpdmUnKTsKICAgICAgICAgICAgICAgICAgICBicmVhazsKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgZnVuY3Rpb24gZHJhdygpIHsKICAgICAgICAgICAgY3R4LmNsZWFyUmVjdCgwLCAwLCBjYW52YXMud2lkdGgsIGNhbnZhcy5oZWlnaHQpOwoKICAgICAgICAgICAgY3R4LmZpbGxTdHlsZSA9ICdibHVlJzsKICAgICAgICAgICAgYmx1ZURvdHMuZm9yRWFjaChkb3QgPT4gewogICAgICAgICAgICAgICAgY3R4LmJlZ2luUGF0aCgpOwogICAgICAgICAgICAgICAgY3R4LmFyYyhkb3QueCwgZG90LnksIDYsIDAsIE1hdGguUEkgKiAyKTsKICAgICAgICAgICAgICAgIGN0eC5maWxsKCk7CiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgaWYgKHBvaW50cy5ibGFjaykgewogICAgICAgICAgICAgICAgY3R4LmZpbGxTdHlsZSA9ICdibGFjayc7CiAgICAgICAgICAgICAgICBjdHguYmVnaW5QYXRoKCk7CiAgICAgICAgICAgICAgICBjdHguYXJjKHBvaW50cy5ibGFjay54LCBwb2ludHMuYmxhY2sueSwgOCwgMCwgTWF0aC5QSSAqIDIpOwogICAgICAgICAgICAgICAgY3R4LmZpbGwoKTsKICAgICAgICAgICAgfQogICAgICAgICAgICBpZiAocG9pbnRzLnllbGxvdykgewogICAgICAgICAgICAgICAgY3R4LmZpbGxTdHlsZSA9ICd5ZWxsb3cnOwogICAgICAgICAgICAgICAgY3R4LmJlZ2luUGF0aCgpOwogICAgICAgICAgICAgICAgY3R4LmFyYyhwb2ludHMueWVsbG93LngsIHBvaW50cy55ZWxsb3cueSwgOCwgMCwgTWF0aC5QSSAqIDIpOwogICAgICAgICAgICAgICAgY3R4LmZpbGwoKTsKICAgICAgICAgICAgfQoKICAgICAgICAgICAgaWYgKGN1cnJlbnRQYXRoKSB7CiAgICAgICAgICAgICAgICBjdHguc3Ryb2tlU3R5bGUgPSAncmdiYSgwLCAyNTUsIDAsIDAuNSknOwogICAgICAgICAgICAgICAgY3R4LmxpbmVXaWR0aCA9IDM7CiAgICAgICAgICAgICAgICBjdHguYmVnaW5QYXRoKCk7CiAgICAgICAgICAgICAgICBjdHgubW92ZVRvKGN1cnJlbnRQYXRoWzBdLngsIGN1cnJlbnRQYXRoWzBdLnkpOwogICAgICAgICAgICAgICAgZm9yIChsZXQgaSA9IDE7IGkgPCBjdXJyZW50UGF0aC5sZW5ndGg7IGkrKykgewogICAgICAgICAgICAgICAgICAgIGN0eC5saW5lVG8oY3VycmVudFBhdGhbaV0ueCwgY3VycmVudFBhdGhbaV0ueSk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBjdHguc3Ryb2tlKCk7CiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIGZ1bmN0aW9uIGFuaW1hdGVNb3ZlbWVudChwYXRoKSB7CiAgICAgICAgICAgIGlmICghcGF0aCkgcmV0dXJuOwoKICAgICAgICAgICAgbGV0IGN1cnJlbnRJbmRleCA9IDA7CiAgICAgICAgICAgIGNvbnN0IGFuaW1hdGlvblNwZWVkID0gNTsKCiAgICAgICAgICAgIGZ1bmN0aW9uIGFuaW1hdGUoKSB7CiAgICAgICAgICAgICAgICBpZiAoY3VycmVudEluZGV4ID49IHBhdGgubGVuZ3RoIC0gMSkgewogICAgICAgICAgICAgICAgICAgIGNhbmNlbEFuaW1hdGlvbkZyYW1lKGFuaW1hdGlvbklkKTsKICAgICAgICAgICAgICAgICAgICByZXR1cm47CiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgY29uc3QgbmV4dFBvaW50ID0gcGF0aFtjdXJyZW50SW5kZXggKyAxXTsKICAgICAgICAgICAgICAgIGNvbnN0IGR4ID0gbmV4dFBvaW50LnggLSBwb2ludHMuYmxhY2sueDsKICAgICAgICAgICAgICAgIGNvbnN0IGR5ID0gbmV4dFBvaW50LnkgLSBwb2ludHMuYmxhY2sueTsKICAgICAgICAgICAgICAgIGNvbnN0IGRpc3RhbmNlID0gTWF0aC5zcXJ0KGR4ICogZHggKyBkeSAqIGR5KTsKCiAgICAgICAgICAgICAgICBpZiAoZGlzdGFuY2UgPD0gYW5pbWF0aW9uU3BlZWQpIHsKICAgICAgICAgICAgICAgICAgICBwb2ludHMuYmxhY2sueCA9IG5leHRQb2ludC54OwogICAgICAgICAgICAgICAgICAgIHBvaW50cy5ibGFjay55ID0gbmV4dFBvaW50Lnk7CiAgICAgICAgICAgICAgICAgICAgY3VycmVudEluZGV4Kys7CiAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgIGNvbnN0IGRpcmVjdGlvblggPSBkeCAvIGRpc3RhbmNlOwogICAgICAgICAgICAgICAgICAgIGNvbnN0IGRpcmVjdGlvblkgPSBkeSAvIGRpc3RhbmNlOwoKICAgICAgICAgICAgICAgICAgICBwb2ludHMuYmxhY2sueCArPSBkaXJlY3Rpb25YICogYW5pbWF0aW9uU3BlZWQ7CiAgICAgICAgICAgICAgICAgICAgcG9pbnRzLmJsYWNrLnkgKz0gZGlyZWN0aW9uWSAqIGFuaW1hdGlvblNwZWVkOwogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIGRyYXcoKTsKICAgICAgICAgICAgICAgIGFuaW1hdGlvbklkID0gcmVxdWVzdEFuaW1hdGlvbkZyYW1lKGFuaW1hdGUpOwogICAgICAgICAgICB9CgogICAgICAgICAgICBhbmltYXRlKCk7CiAgICAgICAgfQoKICAgICAgICBjYW52YXMuYWRkRXZlbnRMaXN0ZW5lcignbW91c2Vkb3duJywgZSA9PiB7CiAgICAgICAgICAgIGNvbnN0IHggPSBlLm9mZnNldFg7CiAgICAgICAgICAgIGNvbnN0IHkgPSBlLm9mZnNldFk7CiAgICAgICAgICAgIGlmIChjdXJyZW50TW9kZSA9PT0gJ2JsYWNrJykgewogICAgICAgICAgICAgICAgcG9pbnRzLmJsYWNrID0geyB4LCB5IH07CiAgICAgICAgICAgIH0gZWxzZSBpZiAoY3VycmVudE1vZGUgPT09ICd5ZWxsb3cnKSB7CiAgICAgICAgICAgICAgICBwb2ludHMueWVsbG93ID0geyB4LCB5IH07CiAgICAgICAgICAgIH0gZWxzZSBpZiAoY3VycmVudE1vZGUgPT09ICdibHVlJykgewogICAgICAgICAgICAgICAgLy8g0JfQsdC10YDRltCz0LDRlNC80L4g0L/QvtGC0L7Rh9C90LjQuSDRgdGC0LDQvSDQv9C10YDQtdGI0LrQvtC0INGDINGB0YLQtdC6CiAgICAgICAgICAgICAgICBibHVlRG90c1N0YWNrLnB1c2goWy4uLmJsdWVEb3RzXSk7CiAgICAgICAgICAgICAgICBpc0RyYXdpbmcgPSB0cnVlOwogICAgICAgICAgICAgICAgYmx1ZURvdHMucHVzaCh7IHgsIHkgfSk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZHJhdygpOwogICAgICAgIH0pOwoKICAgICAgICBjYW52YXMuYWRkRXZlbnRMaXN0ZW5lcignbW91c2Vtb3ZlJywgZSA9PiB7CiAgICAgICAgICAgIGlmICghaXNEcmF3aW5nKSByZXR1cm47CiAgICAgICAgICAgIGNvbnN0IHggPSBlLm9mZnNldFg7CiAgICAgICAgICAgIGNvbnN0IHkgPSBlLm9mZnNldFk7CiAgICAgICAgICAgIGlmIChjdXJyZW50TW9kZSA9PT0gJ2JsdWUnKSB7CiAgICAgICAgICAgICAgICBibHVlRG90cy5wdXNoKHsgeCwgeSB9KTsKICAgICAgICAgICAgICAgIGRyYXcoKTsKICAgICAgICAgICAgfQogICAgICAgIH0pOwoKICAgICAgICBjYW52YXMuYWRkRXZlbnRMaXN0ZW5lcignbW91c2V1cCcsICgpID0+IHsKICAgICAgICAgICAgaXNEcmF3aW5nID0gZmFsc2U7CiAgICAgICAgfSk7CgogICAgICAgIGJsYWNrQnRuLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gc2V0TW9kZSgnYmxhY2snKSk7CiAgICAgICAgeWVsbG93QnRuLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gc2V0TW9kZSgneWVsbG93JykpOwogICAgICAgIGJsdWVCdG4uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiBzZXRNb2RlKCdibHVlJykpOwoKICAgICAgICBnb0J0bi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHsKICAgICAgICAgICAgaWYgKCFwb2ludHMuYmxhY2sgfHwgIXBvaW50cy55ZWxsb3cpIHJldHVybjsKCiAgICAgICAgICAgIHdvcmtlci5wb3N0TWVzc2FnZSh7CiAgICAgICAgICAgICAgICBzdGFydDogcG9pbnRzLmJsYWNrLAogICAgICAgICAgICAgICAgZW5kOiBwb2ludHMueWVsbG93LAogICAgICAgICAgICAgICAgb2JzdGFjbGVzOiBibHVlRG90cwogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIHdvcmtlci5vbm1lc3NhZ2UgPSBmdW5jdGlvbihlKSB7CiAgICAgICAgICAgICAgICBjdXJyZW50UGF0aCA9IGUuZGF0YTsKICAgICAgICAgICAgICAgIGFuaW1hdGVNb3ZlbWVudChjdXJyZW50UGF0aCk7CiAgICAgICAgICAgIH07CiAgICAgICAgfSk7CgogICAgICAgIC8vINCU0L7QtNCw0ZTQvNC+INGE0YPQvdC60YbRltGOINCy0ZbQtNC80ZbQvdC4INC+0YHRgtCw0L3QvdGM0L7Qs9C+INC60YDQvtC60YMKICAgICAgICB1bmRvQnRuLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gewogICAgICAgICAgICBpZiAoYmx1ZURvdHNTdGFjay5sZW5ndGggPiAwKSB7CiAgICAgICAgICAgICAgICBibHVlRG90cyA9IGJsdWVEb3RzU3RhY2sucG9wKCk7IC8vINCS0ZbQtNC90L7QstC70Y7RlNC80L4g0L/QvtC/0LXRgNC10LTQvdGW0Lkg0YHRgtCw0L0KICAgICAgICAgICAgICAgIGRyYXcoKTsKICAgICAgICAgICAgfQogICAgICAgIH0pOwoKICAgICAgICBkcmF3KCk7CiAgICA8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+Cg==`;
+ // Кнопка завантаження
+    document.getElementById('download-btn').addEventListener('click', () => {
+        // Декодуємо Base64 вміст в UTF-8
+        const decodedHtmlContent = decodeURIComponent(escape(atob(base64HtmlContent)));
+
+        // Створюємо Blob з правильним кодуванням UTF-8
+        const blob = new Blob([decodedHtmlContent], { type: 'text/html;charset=utf-8' });
+
+        // Створюємо посилання для завантаження
+        const downloadLink = document.createElement('a');
+        downloadLink.href = URL.createObjectURL(blob);
+        downloadLink.download = 'TetraPathFinder.html'; // Ім'я файлу
+        downloadLink.click();
+
+        // Звільняємо пам'ять
+        URL.revokeObjectURL(downloadLink.href);
+    });
+    </script>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let drawingColor = 'red';
+let isDrawing = false;
+let points = [];
+let lines = [];
+let waveParticles = [];
+let particleCount = 360;
+let particleSpeed = 2;
+let orangeFragments = [];
+
+// Змінити колір малювання
+function setColor(color) {
+  drawingColor = color;
+}
+
+// Події для початку і завершення малювання
+canvas.addEventListener('mousedown', startDrawing);
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mouseup', stopDrawing);
+canvas.addEventListener('mouseleave', stopDrawing);
+canvas.addEventListener('touchstart', startDrawing);
+canvas.addEventListener('touchmove', draw);
+canvas.addEventListener('touchend', stopDrawing);
+
+// Кнопки для зміни кольору
+document.getElementById('redButton').addEventListener('click', () => setColor('red'));
+document.getElementById('greenButton').addEventListener('click', () => setColor('green'));
+document.getElementById('blueButton').addEventListener('click', () => setColor('blue'));
+document.getElementById('orangeButton').addEventListener('click', () => setColor('orange'));
+document.getElementById('goButton').addEventListener('click', startWave);
+document.getElementById('undoButton').addEventListener('click', undoLastLine);
+document.getElementById('clearButton').addEventListener('click', clearCanvas);
+
+// Оновлення налаштувань кількості частинок та швидкості
+document.getElementById('particleCount').addEventListener('input', e => particleCount = parseInt(e.target.value));
+document.getElementById('particleSpeed').addEventListener('input', e => {
+  const speed = parseFloat(e.target.value);
+  if (!isNaN(speed)) {
+    particleSpeed = speed;
+  }
+});
+
+// Початок малювання
+function startDrawing(e) {
+  isDrawing = true;
+  const { offsetX, offsetY } = getCoordinates(e);
+  points = [{ x: offsetX, y: offsetY, color: drawingColor }];
+}
+
+// Малювання
+function draw(e) {
+  if (!isDrawing) return;
+  const { offsetX, offsetY } = getCoordinates(e);
+  points.push({ x: offsetX, y: offsetY, color: drawingColor });
+  redrawCanvas();
+}
+
+// Завершення малювання
+function stopDrawing() {
+  if (isDrawing) {
+    isDrawing = false;
+    if (points.length > 0) {
+      if (drawingColor === 'orange') {
+        points.forEach(point => orangeFragments.push({
+          x: point.x,
+          y: point.y,
+          vx: 0,
+          vy: 0
+        }));
+      } else {
+        lines.push([...points]);
+      }
+      points = [];
+      redrawCanvas();
+    }
+  }
+}
+
+// Функція для відміни останньої лінії
+function undoLastLine() {
+  if (lines.length > 0) {
+    lines.pop();
+    redrawCanvas();
+  }
+}
+
+// Очищення полотна
+function clearCanvas() {
+  lines = [];
+  waveParticles = [];
+  orangeFragments = [];
+  redrawCanvas();
+}
+
+// Перемалювання
+function redrawCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  lines.forEach(line => drawLine(line));
+  if (points.length > 0) drawLine(points);
+  drawOrangeParticles();
+}
+
+// Малювання лінії
+function drawLine(line) {
+  if (line.length < 2) return;
+  ctx.beginPath();
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = line[0].color;
+  ctx.moveTo(line[0].x, line[0].y);
+  for (let i = 1; i < line.length; i++) {
+    ctx.lineTo(line[i].x, line[i].y);
+  }
+  ctx.stroke();
+}
+
+// Запуск хвилі
+function startWave() {
+  waveParticles = [];
+  lines.forEach(line => {
+    if (line[0].color === 'red') {
+      line.forEach(point => {
+        for (let i = 0; i < particleCount; i++) {
+          const angle = (i * 360 / particleCount) * (Math.PI / 180);
+          waveParticles.push({
+            x: point.x,
+            y: point.y,
+            angle: angle,
+            opacity: 1
+          });
+        }
+      });
+    }
+  });
+  requestAnimationFrame(updateWave);
+}
+
+// Оновлення радіохвилі
+function updateWave() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  redrawCanvas();
+  ctx.globalAlpha = 1;
+
+  waveParticles.forEach((particle, index) => {
+    if (particle.opacity <= 0) {
+      waveParticles.splice(index, 1);
+      return;
+    }
+
+    ctx.globalAlpha = particle.opacity;
+    ctx.fillStyle = 'red';
+    ctx.beginPath();
+    ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
+    ctx.fill();
+
+    let newX = particle.x + Math.cos(particle.angle) * particleSpeed;
+    let newY = particle.y + Math.sin(particle.angle) * particleSpeed;
+
+    if (newX <= 0 || newX >= canvas.width) {
+      particle.angle = Math.PI - particle.angle;
+      particle.opacity -= 0.1;
+    }
+    if (newY <= 0 || newY >= canvas.height) {
+      particle.angle = -particle.angle;
+      particle.opacity -= 0.1;
+    }
+
+    // Взаємодія з помаранчевими частинками
+    orangeFragments.forEach(fragment => {
+      const dx = fragment.x - particle.x;
+      const dy = fragment.y - particle.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      if (distance < 5) {
+        const impulse = particle.opacity * 0.2;
+        fragment.vx += Math.cos(particle.angle) * impulse;
+        fragment.vy += Math.sin(particle.angle) * impulse;
+        particle.opacity -= 0.1;
+      }
+    });
+
+    // Відбиття від синіх ліній
+    lines.forEach(line => {
+      if (line[0].color === 'blue' && isPointNearLine(newX, newY, line)) {
+        particle.angle = Math.atan2(particle.y - newY, particle.x - newX);
+        particle.opacity -= 0.1;
+      }
+    });
+
+    particle.x = newX;
+    particle.y = newY;
+  });
+
+  ctx.globalAlpha = 1;
+  updateOrangeFragments();
+  if (waveParticles.length > 0) {
+    requestAnimationFrame(updateWave);
+  }
+}
+
+// Оновлення руху помаранчевих частинок
+function updateOrangeFragments() {
+  orangeFragments.forEach(fragment => {
+    fragment.x += fragment.vx;
+    fragment.y += fragment.vy;
+    fragment.vx *= 0.95;
+    fragment.vy *= 0.95;
+    
+    lines.forEach(line => {
+      if (line[0].color === 'blue' && isPointNearLine(fragment.x, fragment.y, line)) {
+        const angle = Math.atan2(fragment.vy, fragment.vx);
+        fragment.vx = -fragment.vx * 0.7;
+        fragment.vy = -fragment.vy * 0.7;
+      }
+    });
+
+    if (fragment.x <= 0 || fragment.x >= canvas.width) fragment.vx *= -1;
+    if (fragment.y <= 0 || fragment.y >= canvas.height) fragment.vy *= -1;
+  });
+}
+
+// Малювання помаранчевих частинок
+function drawOrangeParticles() {
+  orangeFragments.forEach(fragment => {
+    ctx.fillStyle = 'orange';
+    ctx.beginPath();
+    ctx.arc(fragment.x, fragment.y, 2, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
+// Отримання координат із події (для touch)
+function getCoordinates(e) {
+  return e.touches
+    ? { offsetX: e.touches[0].clientX - canvas.offsetLeft, offsetY: e.touches[0].clientY - canvas.offsetTop }
+    : { offsetX: e.offsetX, offsetY: e.offsetY };
+}
+
+// Перевірка, чи близька точка до синьої лінії
+function isPointNearLine(px, py, line) {
+  for (let i = 0; i < line.length - 1; i++) {
+    const segment = { x1: line[i].x, y1: line[i].y, x2: line[i + 1].x, y2: line[i + 1].y };
+    const dist = pointToSegmentDistance(px, py, segment);
+    if (dist < 5) return true;
+  }
+  return false;
+}
+
+// Функція розрахунку відстані до лінійного сегмента
+function pointToSegmentDistance(px, py, segment) {
+  const { x1, y1, x2, y2 } = segment;
+  const dx = x2 - x1;
+  const dy = y2 - y1;
+  const lengthSquared = dx * dx + dy * dy;
+  let t = ((px - x1) * dx + (py - y1) * dy) / lengthSquared;
+  t = Math.max(0, Math.min(1, t));
+  const closestX = x1 + t * dx;
+  const closestY = y1 + t * dy;
+  return Math.hypot(px - closestX, py - closestY);
+}
+</script>
+
+</body>
+</html>
