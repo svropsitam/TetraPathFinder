@@ -1,5 +1,84 @@
-# ЛІЦЕНЗІЙНИЙ ДОГОВІР/LICENSE AGREEMENT (Ukrainian/English(bellow))
-# ЛІЦЕНЗІЙНИЙ ДОГОВІР
+## Зміст | Content
+
+ 
+# 1. Інструкція | Manual
+- [Ukrainian](#Посібник-користувача)
+- [English](#User-Guide)
+  
+# 2. ЛІЦЕНЗІЙНИЙ ДОГОВІР | LICENSE AGREEMENT
+- [Ukrainian](#ЛІЦЕНЗІЙНИЙ-ДОГОВІР)
+- [English](#LICENSE-AGREEMENT)
+
+---
+---
+---
+---
+---
+
+## Посібник користувача 
+# TetraPathFinder
+
+
+## Опис
+
+Ця веб-програма дозволяє користувачам малювати перешкоди на канвасі, визначати стартову та кінцеву точки, а також використовувати алгоритм пошуку шляху (A*), щоб знайти найкращий шлях між цими точками з урахуванням перешкод.
+
+## Особливості
+
+- **Малювання на канвасі:** Користувачі можуть додавати точки на канвасі, щоб визначити стартову та кінцеву точку.
+- **Перешкоди:** Можна малювати перешкоди на канвасі, щоб пошук шляху не враховував ці області.
+- **Алгоритм пошуку шляху:** Використовує алгоритм A* для пошуку найкоротшого шляху між стартовою і кінцевою точкою.
+- **Анімація руху:** Програма анімує рух об'єкта (чорної точки) по знайденому шляху.
+- **Відміна:** Є можливість скасувати останнє малювання перешкоди.
+
+## Інструкція
+
+### Створення та взаємодія
+
+1. **Чорний (Start):** Виберіть чорну кнопку, щоб визначити початкову точку.
+2. **Жовтий (End):** Виберіть жовту кнопку, щоб визначити кінцеву точку.
+3. **Синій (Obstacles):** Виберіть синю кнопку для малювання перешкод на канвасі. Кожен малюнок перешкоди обчислюється як блок, що буде ігноруватися при розрахунку шляху.
+4. **Побіг (Go):** Після того, як встановлено стартову та кінцеву точки і перешкоди, натисніть кнопку "Побіг", щоб запустити пошук шляху.
+5. **Відмінити (Undo):** Якщо ви хочете скасувати останню перешкоду, натисніть кнопку "Відмінити".
+
+### Кроки для пошуку шляху
+
+1. Малюйте стартову та кінцеву точки.
+2. Додайте перешкоди, малюючи на канвасі.
+3. Натисніть на кнопку **"Побіг"** для запуску пошуку шляху.
+4. Пошук буде виконано, і об'єкт (чорна точка) анімуватиметься по знайденому шляху.
+
+### Контролі
+
+- **Чорний (Start):** Визначає стартову точку.
+- **Жовтий (End):** Визначає кінцеву точку.
+- **Синій (Obstacles):** Використовується для малювання перешкод.
+- **Побіг (Go):** Запускає алгоритм пошуку шляху.
+- **Відмінити (Undo):** Відновлює останній стан малювання перешкод.
+
+### Системні вимоги
+
+- Браузер, що підтримує HTML5 та JavaScript.
+- Інтернет-з'єднання для завантаження ресурсу.
+
+## Важливі примітки
+
+- Ви можете малювати перешкоди, тримаючи мишку на канвасі, що дозволяє легко редагувати перешкоди.
+- Після того, як ви натискаєте кнопку **"Побіг"**, програма автоматично знаходить шлях між стартовою і кінцевою точкою, враховуючи перешкоди.
+- Щоб видалити малюнок перешкоди, просто натисніть кнопку **"Відмінити"**.
+  
+## Технології
+
+- **HTML5 Canvas** для графічного відображення.
+- **JavaScript** для обробки логіки пошуку шляху і анімації руху.
+- **A\* Алгоритм пошуку шляху** для оптимального знаходження маршруту.
+
+
+
+---
+---
+
+## ЛІЦЕНЗІЙНИЙ ДОГОВІР
 Цей ліцензійний договір (далі — "Договір") є юридично обов’язковою угодою між Вами (далі — "Користувач") та Богданом-Любомиром Тетяничем-Бубликом (далі — "Ліцензіар") щодо використання програмного забезпечення (TetraPathFinderGammaEditionL) (далі — "Програмне забезпечення").
 
 ---
@@ -48,6 +127,66 @@
 ---
 ---
 ---
+
+## User Guide 
+# TetraPathFinder
+
+## Description
+
+This web application allows users to draw obstacles on a canvas, set start and end points, and use the A* pathfinding algorithm to find the best path between these points, considering obstacles.
+
+## Features
+
+- **Canvas Drawing:** Users can add points on the canvas to set the start and end points.
+- **Obstacles:** Users can draw obstacles on the canvas, which will be ignored during pathfinding calculations.
+- **Pathfinding Algorithm:** The A* algorithm is used to find the shortest path between the start and end points.
+- **Movement Animation:** The application animates the movement of an object (black dot) along the found path.
+- **Undo:** The last obstacle drawing can be undone.
+
+## Instructions
+
+### Creation and Interaction
+
+1. **Black (Start):** Select the black button to define the starting point.
+2. **Yellow (End):** Select the yellow button to define the ending point.
+3. **Blue (Obstacles):** Select the blue button to draw obstacles on the canvas. Each obstacle drawn is considered as a block that will be ignored in the pathfinding calculation.
+4. **Go (Start Pathfinding):** Once the start and end points are set, and obstacles are placed, click the "Go" button to start the pathfinding process.
+5. **Undo:** If you want to undo the last drawn obstacle, click the "Undo" button.
+
+### Steps for Pathfinding
+
+1. Draw the start and end points.
+2. Add obstacles by drawing on the canvas.
+3. Click the **"Go"** button to start the pathfinding.
+4. The path will be calculated, and the object (black dot) will animate along the found path.
+
+### Controls
+
+- **Black (Start):** Defines the start point.
+- **Yellow (End):** Defines the end point.
+- **Blue (Obstacles):** Used for drawing obstacles.
+- **Go (Start Pathfinding):** Initiates the pathfinding algorithm.
+- **Undo:** Restores the last state of obstacle drawing.
+
+### System Requirements
+
+- A browser that supports HTML5 and JavaScript.
+- An internet connection to load the resource.
+
+## Important Notes
+
+- You can draw obstacles by holding the mouse on the canvas, which makes it easy to edit obstacles.
+- After pressing the **"Go"** button, the program automatically finds the path between the start and end points, taking obstacles into account.
+- To remove a drawn obstacle, simply click the **"Undo"** button.
+
+## Technologies
+
+- **HTML5 Canvas** for graphical display.
+- **JavaScript** for handling pathfinding logic and movement animation.
+
+---
+---
+
 ## LICENSE AGREEMENT
 This License Agreement (hereinafter referred to as the "Agreement") is a legally binding agreement between you (hereinafter referred to as the "User") and Tetianych-Bublyk Bohdan-Liubomyr (hereinafter referred to as the "Licensor") regarding the use of the software(TetraPathFinderGammaEditionL) (hereinafter referred to as the "Software").
 
