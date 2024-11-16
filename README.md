@@ -45,8 +45,8 @@
 Богдан-Любомир Тетянич-Бублик
 Дата: 2024.11.16
 
-
-
+---
+---
 ---
 ## LICENSE AGREEMENT
 This License Agreement (hereinafter referred to as the "Agreement") is a legally binding agreement between you (hereinafter referred to as the "User") and Tetianych-Bublyk Bohdan-Liubomyr (hereinafter referred to as the "Licensor") regarding the use of the software described below (hereinafter referred to as the "Software").
