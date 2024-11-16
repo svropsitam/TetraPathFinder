@@ -18,8 +18,8 @@
 ## 3. Обмеження
 3.1. Користувач не має права:
 
-Передавати, розповсюджувати, продавати, здавати в оренду, або надавати доступ до Програмного забезпечення без письмової згоди Ліцензіара.
-Використовувати Програмне забезпечення для створення похідних продуктів без згоди Ліцензіара.
+- Передавати, розповсюджувати, продавати, здавати в оренду, або надавати доступ до Програмного забезпечення без письмової згоди Ліцензіара.
+- Використовувати Програмне забезпечення для створення похідних продуктів без згоди Ліцензіара.
 
 ---
 ## 4. Відповідальність
@@ -42,7 +42,7 @@
 
 Підписуючи або встановлюючи/використовуючи Програмне забезпечення, Ви підтверджуєте, що ознайомилися з умовами цього Договору та погоджуєтеся з ними.
 
-**[ Богдан-Любомир Тетянич-Бублик ]**
+Богдан-Любомир Тетянич-Бублик 
 Дата: 2024.11.16
 
 ---
@@ -60,15 +60,15 @@ This License Agreement (hereinafter referred to as the "Agreement") is a legally
 ## 2. User Rights
 2.1. The User is entitled to:
 
-Use the Software for personal or professional purposes.
-Analyze the source code of the Software (if provided).
+- Use the Software for personal or professional purposes.
+- Analyze the source code of the Software (if provided).
 
 ---
 ## 3. Restrictions
 3.1. The User is prohibited from:
 
-Transferring, distributing, selling, renting, or granting access to the Software without the prior written consent of the Licensor.
-Using the Software to create derivative works without the Licensor's consent.
+- Transferring, distributing, selling, renting, or granting access to the Software without the prior written consent of the Licensor.
+- Using the Software to create derivative works without the Licensor's consent.
 
 ---
 ## 4. Liability
