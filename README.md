@@ -1,6 +1,6 @@
 # ЛІЦЕНЗІЙНИЙ ДОГОВІР/LICENSE AGREEMENT (Ukrainian/English(bellow))
 # ЛІЦЕНЗІЙНИЙ ДОГОВІР
-Цей ліцензійний договір (далі — "Договір") є юридично обов’язковою угодою між Вами (далі — "Користувач") та Богданом-Любомиром Тетяничем-Бубликом (далі — "Ліцензіар") щодо використання програмного забезпечення, описаного нижче (далі — "Програмне забезпечення").
+Цей ліцензійний договір (далі — "Договір") є юридично обов’язковою угодою між Вами (далі — "Користувач") та Богданом-Любомиром Тетяничем-Бубликом (далі — "Ліцензіар") щодо використання програмного забезпечення (TetraPathFinderGammaEditionL) (далі — "Програмне забезпечення").
 
 ---
 ## 1. Предмет договору
@@ -49,7 +49,7 @@
 ---
 ---
 ## LICENSE AGREEMENT
-This License Agreement (hereinafter referred to as the "Agreement") is a legally binding agreement between you (hereinafter referred to as the "User") and Tetianych-Bublyk Bohdan-Liubomyr (hereinafter referred to as the "Licensor") regarding the use of the software described below (hereinafter referred to as the "Software").
+This License Agreement (hereinafter referred to as the "Agreement") is a legally binding agreement between you (hereinafter referred to as the "User") and Tetianych-Bublyk Bohdan-Liubomyr (hereinafter referred to as the "Licensor") regarding the use of the software(TetraPathFinderGammaEditionL) (hereinafter referred to as the "Software").
 
 ---
 ## 1. Subject of the Agreement
