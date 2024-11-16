@@ -1,0 +1,431 @@
+<!-- # ЛІЦЕНЗІЙНИЙ ДОГОВІР/LICENSE AGREEMENT (Ukrainian/English(bellow))
+# ЛІЦЕНЗІЙНИЙ ДОГОВІР
+Цей ліцензійний договір (далі — "Договір") є юридично обов’язковою угодою між Вами (далі — "Користувач") та Богдан-Любомир Тетянич-Бублик (далі — "Ліцензіар") щодо використання програмного забезпечення, описаного нижче (далі — "Програмне забезпечення").
+
+---
+## 1. Предмет договору
+1.1. Ліцензіар надає Користувачу невиключну, обмежену ліцензію на використання Програмного забезпечення відповідно до умов цього Договору.    
+1.2. Програмне забезпечення залишається виключною власністю Ліцензіара.
+
+---
+## 2. Права Користувача
+2.1. Користувач має право:
+
+- Використовувати Програмне забезпечення для особистих або професійних цілей.
+- Аналізувати вихідний код Програмного забезпечення (якщо він наданий).
+
+---
+## 3. Обмеження
+3.1. Користувач не має права:
+
+- Передавати, розповсюджувати, продавати, здавати в оренду, або надавати доступ до Програмного забезпечення без письмової згоди Ліцензіара.
+- Використовувати Програмне забезпечення для створення похідних продуктів без згоди Ліцензіара.
+
+---
+## 4. Відповідальність
+4.1. Ліцензіар не несе відповідальності за будь-які прямі або непрямі збитки, завдані внаслідок використання Програмного забезпечення.  
+4.2. Програмне забезпечення надається "як є", без жодних гарантій щодо його працездатності або відповідності конкретним цілям.
+
+---
+## 5. Захист інтелектуальної власності
+5.1. Усі права на Програмне забезпечення, включаючи, але не обмежуючись, авторськими правами та комерційними таємницями, залишаються за Ліцензіаром.
+
+---
+## 6. Припинення дії Договору
+6.1. Цей Договір діє до моменту його припинення.  
+6.2. Ліцензіар може припинити дію Договору в разі порушення Користувачем будь-яких умов цього Договору.
+
+---
+## 7. Інші положення
+7.1. Цей Договір регулюється чинним законодавством України.  
+7.2. Усі спори, що виникають у зв’язку з цим Договором, вирішуються шляхом переговорів, а в разі неможливості досягнення згоди — у відповідному суді.
+
+Підписуючи або встановлюючи/використовуючи Програмне забезпечення, Ви підтверджуєте, що ознайомилися з умовами цього Договору та погоджуєтеся з ними.
+
+**Богдан-Любомир Тетянич-Бублик**  
+Дата: 2024.11.16
+
+---
+---
+---
+## LICENSE AGREEMENT
+This License Agreement (hereinafter referred to as the "Agreement") is a legally binding agreement between you (hereinafter referred to as the "User") and Tetianych-Bublyk Bohdan-Liubomyr (hereinafter referred to as the "Licensor") regarding the use of the software described below (hereinafter referred to as the "Software").
+
+---
+## 1. Subject of the Agreement
+1.1. The Licensor grants the User a non-exclusive, limited license to use the Software under the terms of this Agreement.  
+1.2. The Software remains the exclusive property of the Licensor.
+
+---
+## 2. User Rights
+2.1. The User is entitled to:
+
+- Use the Software for personal or professional purposes.
+- Analyze the source code of the Software (if provided).
+
+---
+## 3. Restrictions
+3.1. The User is prohibited from:
+
+- Transferring, distributing, selling, renting, or granting access to the Software without the prior written consent of the Licensor.
+- Using the Software to create derivative works without the Licensor's consent.
+
+---
+## 4. Liability
+4.1. The Licensor shall not be held liable for any direct or indirect damages resulting from the use of the Software.  
+4.2. The Software is provided "as is," without any guarantees of functionality or suitability for specific purposes.
+
+---
+## 5. Intellectual Property Protection
+5.1. All rights to the Software, including but not limited to copyrights and trade secrets, remain with the Licensor.
+
+---
+## 6. Termination of the Agreement
+6.1. This Agreement shall remain in effect until terminated.  
+6.2. The Licensor may terminate this Agreement if the User violates any terms of this Agreement.
+
+---
+## 7. Miscellaneous Provisions
+7.1. This Agreement shall be governed by the laws of Ukraine.  
+7.2. Any disputes arising from this Agreement shall be resolved through negotiations. If no resolution is reached, disputes shall be settled in the appropriate court.
+
+By signing or installing/using the Software, you confirm that you have read and agree to the terms of this Agreement.
+
+**Tetianych-Bublyk Bohdan-Liubomyr**    
+Date: 2024.11.16 -->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding Canvas</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 10px auto;
+            touch-action: none;
+        }
+        .controls {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .btn {
+            padding: 8px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .btn-yellow {
+            background-color: #FFD700;
+            color: black;
+        }
+        .btn-blue {
+            background-color: #0000FF;
+            color: white;
+        }
+        .btn-black {
+            background-color: #000000;
+            color: white;
+        }
+        .btn-go {
+            background-color: #32CD32;
+            color: white;
+        }
+        .btn-undo {
+            background-color: #FF4500;
+            color: white;
+        }
+        .active {
+            box-shadow: 0 0 5px #666;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <div class="controls">
+        <button id="blackBtn" class="btn btn-black">Чорний</button>
+        <button id="yellowBtn" class="btn btn-yellow">Жовтий</button>
+        <button id="blueBtn" class="btn btn-blue">Синій</button>
+        <button id="goBtn" class="btn btn-go">Побіг</button>
+        <button id="undoBtn" class="btn btn-undo">Відмінити</button>
+    </div>
+
+    <script>
+         const workerCode = `
+            function calculatePath(start, end, obstacles) {
+                function heuristic(a, b) {
+                    return Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
+                }
+
+                function getNeighbors(node) {
+                    const neighbors = [];
+                    const directions = [
+                        {x: 0, y: 1}, {x: 1, y: 0},
+                        {x: 0, y: -1}, {x: -1, y: 0},
+                        {x: 1, y: 1}, {x: -1, y: 1},
+                        {x: 1, y: -1}, {x: -1, y: -1}
+                    ];
+
+                    for (let dir of directions) {
+                        const newX = node.x + dir.x * 10;
+                        const newY = node.y + dir.y * 10;
+
+                        if (newX >= 0 && newX < 800 && newY >= 0 && newY < 600) {
+                            let collision = false;
+                            for (let obstacle of obstacles) {
+                                const distance = Math.sqrt(
+                                    Math.pow(newX - obstacle.x, 2) + 
+                                    Math.pow(newY - obstacle.y, 2)
+                                );
+                                if (distance < 10) {
+                                    collision = true;
+                                    break;
+                                }
+                            }
+
+                            if (!collision) {
+                                neighbors.push({x: newX, y: newY});
+                            }
+                        }
+                    }
+                    return neighbors;
+                }
+
+                const openSet = [start];
+                const cameFrom = new Map();
+                const gScore = new Map();
+                const fScore = new Map();
+
+                gScore.set(JSON.stringify(start), 0);
+                fScore.set(JSON.stringify(start), heuristic(start, end));
+
+                while (openSet.length > 0) {
+                    let current = openSet[0];
+                    let lowestFScore = fScore.get(JSON.stringify(current));
+                    let currentIndex = 0;
+
+                    for (let i = 1; i < openSet.length; i++) {
+                        const score = fScore.get(JSON.stringify(openSet[i]));
+                        if (score < lowestFScore) {
+                            current = openSet[i];
+                            lowestFScore = score;
+                            currentIndex = i;
+                        }
+                    }
+
+                    if (Math.abs(current.x - end.x) < 10 && Math.abs(current.y - end.y) < 10) {
+                        const path = [current];
+                        let temp = current;
+                        while (cameFrom.has(JSON.stringify(temp))) {
+                            temp = cameFrom.get(JSON.stringify(temp));
+                            path.unshift(temp);
+                        }
+                        return path;
+                    }
+
+                    openSet.splice(currentIndex, 1);
+                    const neighbors = getNeighbors(current);
+
+                    for (let neighbor of neighbors) {
+                        const tentativeGScore = gScore.get(JSON.stringify(current)) + 
+                            Math.sqrt(Math.pow(neighbor.x - current.x, 2) + Math.pow(neighbor.y - current.y, 2));
+
+                        const neighborStr = JSON.stringify(neighbor);
+                        if (!gScore.has(neighborStr) || tentativeGScore < gScore.get(neighborStr)) {
+                            cameFrom.set(neighborStr, current);
+                            gScore.set(neighborStr, tentativeGScore);
+                            fScore.set(neighborStr, tentativeGScore + heuristic(neighbor, end));
+
+                            if (!openSet.some(p => p.x === neighbor.x && p.y === neighbor.y)) {
+                                openSet.push(neighbor);
+                            }
+                        }
+                    }
+                }
+                return null;
+            }
+
+            self.onmessage = function(e) {
+                const path = calculatePath(e.data.start, e.data.end, e.data.obstacles);
+                self.postMessage(path);
+            };
+        `;
+
+
+        const blob = new Blob([workerCode], { type: 'application/javascript' });
+        const worker = new Worker(URL.createObjectURL(blob));
+
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const blackBtn = document.getElementById('blackBtn');
+        const yellowBtn = document.getElementById('yellowBtn');
+        const blueBtn = document.getElementById('blueBtn');
+        const goBtn = document.getElementById('goBtn');
+        const undoBtn = document.getElementById('undoBtn');
+
+        let currentMode = 'black';
+        let points = {
+            black: null,
+            yellow: null
+        };
+        let blueDots = [];
+        let isDrawing = false;
+        let currentPath = null;
+        let animationId = null;
+        let blueDotsStack = []; // Стек для збереження стану перешкод
+
+        blackBtn.classList.add('active');
+
+        function setMode(mode) {
+            currentMode = mode;
+            [blackBtn, yellowBtn, blueBtn].forEach(btn => btn.classList.remove('active'));
+            switch(mode) {
+                case 'black':
+                    blackBtn.classList.add('active');
+                    break;
+                case 'yellow':
+                    yellowBtn.classList.add('active');
+                    break;
+                case 'blue':
+                    blueBtn.classList.add('active');
+                    break;
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = 'blue';
+            blueDots.forEach(dot => {
+                ctx.beginPath();
+                ctx.arc(dot.x, dot.y, 6, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            if (points.black) {
+                ctx.fillStyle = 'black';
+                ctx.beginPath();
+                ctx.arc(points.black.x, points.black.y, 8, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            if (points.yellow) {
+                ctx.fillStyle = 'yellow';
+                ctx.beginPath();
+                ctx.arc(points.yellow.x, points.yellow.y, 8, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            if (currentPath) {
+                ctx.strokeStyle = 'rgba(0, 255, 0, 0.5)';
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                ctx.moveTo(currentPath[0].x, currentPath[0].y);
+                for (let i = 1; i < currentPath.length; i++) {
+                    ctx.lineTo(currentPath[i].x, currentPath[i].y);
+                }
+                ctx.stroke();
+            }
+        }
+
+        function animateMovement(path) {
+            if (!path) return;
+
+            let currentIndex = 0;
+            const animationSpeed = 5;
+
+            function animate() {
+                if (currentIndex >= path.length - 1) {
+                    cancelAnimationFrame(animationId);
+                    return;
+                }
+
+                const nextPoint = path[currentIndex + 1];
+                const dx = nextPoint.x - points.black.x;
+                const dy = nextPoint.y - points.black.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance <= animationSpeed) {
+                    points.black.x = nextPoint.x;
+                    points.black.y = nextPoint.y;
+                    currentIndex++;
+                } else {
+                    const directionX = dx / distance;
+                    const directionY = dy / distance;
+
+                    points.black.x += directionX * animationSpeed;
+                    points.black.y += directionY * animationSpeed;
+                }
+
+                draw();
+                animationId = requestAnimationFrame(animate);
+            }
+
+            animate();
+        }
+
+        canvas.addEventListener('mousedown', e => {
+            const x = e.offsetX;
+            const y = e.offsetY;
+            if (currentMode === 'black') {
+                points.black = { x, y };
+            } else if (currentMode === 'yellow') {
+                points.yellow = { x, y };
+            } else if (currentMode === 'blue') {
+                // Зберігаємо поточний стан перешкод у стек
+                blueDotsStack.push([...blueDots]);
+                isDrawing = true;
+                blueDots.push({ x, y });
+            }
+            draw();
+        });
+
+        canvas.addEventListener('mousemove', e => {
+            if (!isDrawing) return;
+            const x = e.offsetX;
+            const y = e.offsetY;
+            if (currentMode === 'blue') {
+                blueDots.push({ x, y });
+                draw();
+            }
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+        });
+
+        blackBtn.addEventListener('click', () => setMode('black'));
+        yellowBtn.addEventListener('click', () => setMode('yellow'));
+        blueBtn.addEventListener('click', () => setMode('blue'));
+
+        goBtn.addEventListener('click', () => {
+            if (!points.black || !points.yellow) return;
+
+            worker.postMessage({
+                start: points.black,
+                end: points.yellow,
+                obstacles: blueDots
+            });
+
+            worker.onmessage = function(e) {
+                currentPath = e.data;
+                animateMovement(currentPath);
+            };
+        });
+
+        // Додаємо функцію відміни останнього кроку
+        undoBtn.addEventListener('click', () => {
+            if (blueDotsStack.length > 0) {
+                blueDots = blueDotsStack.pop(); // Відновлюємо попередній стан
+                draw();
+            }
+        });
+
+        draw();
+    </script>
+</body>
+</html>
