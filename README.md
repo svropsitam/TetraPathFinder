@@ -59,7 +59,7 @@
 ### Системні вимоги
 
 - Браузер, що підтримує HTML5 та JavaScript.
-- Інтернет-з'єднання для завантаження ресурсу.
+- Інтернет-з'єднання для завантаження ресурсу.  (якщо тільки ви не скачали програму собі на пристрій)
 
 ## Важливі примітки
 
@@ -171,7 +171,7 @@ This web application allows users to draw obstacles on a canvas, set start and e
 ### System Requirements
 
 - A browser that supports HTML5 and JavaScript.
-- An internet connection to load the resource.
+- An internet connection to load the resource.  (except case of using offline version)
 
 ## Important Notes
 
