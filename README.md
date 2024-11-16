@@ -42,7 +42,7 @@
 
 Підписуючи або встановлюючи/використовуючи Програмне забезпечення, Ви підтверджуєте, що ознайомилися з умовами цього Договору та погоджуєтеся з ними.
 
-Богдан-Любомир Тетянич-Бублик 
+**Богдан-Любомир Тетянич-Бублик**
 Дата: 2024.11.16
 
 ---
@@ -91,5 +91,5 @@ This License Agreement (hereinafter referred to as the "Agreement") is a legally
 
 By signing or installing/using the Software, you confirm that you have read and agree to the terms of this Agreement.
 
-Tetianych-Bublyk Bohdan-Liubomyr
+**Tetianych-Bublyk Bohdan-Liubomyr**
 Date: 2024.11.16
